@@ -1,0 +1,17 @@
+.circle{
+	height: 80px;
+	width: 80px;
+    border:8px solid black;
+    box-shadow: 10px rgba(138,134,138,0.89);
+    border-radius: 50%;
+	font-size: 36px;
+	margin: 20px;
+	background-color: white;
+}   	
+.timer{
+	position: relative;
+	top: 50%;
+	left: 50%;
+	transform: translateX(-25%) translateY(-50%); 
+	color: #82B1FF;
+}
