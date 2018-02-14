@@ -1,0 +1,128 @@
+ 
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	
+</head>
+<body>
+	 
+	<div class="container">
+		<h2>Registration</h2>
+		<form action="" name="registration" class="reg_form">
+		 
+		<div >
+			<label for="firstname">First Name</label>
+			<input type="text" name="firstname" id="firstname" class="firstname" />
+			
+		</div>
+		<br>
+		<div>
+			<label for="lastname">Last Name</label>
+			<input type="text" name="lastname" id="lastname" class="lastname"/>
+		</div>
+		<br>
+		<div >
+			<label for="mail">Email</label>
+			<input type="mail" name="mail" id="mail" class="mail" />
+			</div>
+		<br>
+		<div >
+			<label for="">Job Title</label>
+			<input type="text" name="jobtitle" id="jobtitle" class="jobtitle" />
+			</div>
+		<br>
+		<div >
+			<label for="">New To Hackathon?</label>
+			<input type="radio" name="new" value="Yes"> Yes
+			<input type="radio" name="new" value="No" checked>  No
+			</div>
+		<br>
+		<div >
+
+			<label for="">What Kind Of Hacker Are You?</label>
+			<select name="type" value="type" >
+
+				<option value="developer">Developer</option>
+				<option value="designer">Designer</option>
+				<option value="data scientist">Data scientist</option>
+				<option value="domain expert">Domain expert</option>
+				<option value="government staff">Government staff</option>
+				<option value="communicator">Communicator</option>
+				<option value="project manager">Project manager</option>
+				<option value="advocate">Advocate</option>
+
+			</select>
+			</div>
+		<br>
+		<div >
+			<label for="">What are you interested in Hacking On?</label>
+			<textarea name="interest" id="interest" class="interest" /></textarea> 
+			</div>
+		<br>
+		<div >
+			<label for="">Are You Interested in Workshop Before Hackathon?</label>
+			<input type="radio" name="workshop" value="Yes"> Yes
+			<input type="radio" name="workshop" value="No" checked>  No
+			</div>
+		<br>
+		<div >
+
+			<label for="">How Do You Heard About Our Hackathon?</label>
+			<textarea name="heard_abt" id="heard_abt" class="heard_abt" /></textarea> 
+			</div>
+		<br>
+		<div >
+			<label for="">Any Special Needs or Request?</label>
+			<textarea name="needs" id="needs" class="needs" /></textarea> 
+			</div>
+		<br> 
+		<div >
+
+			<button type="submit">Register</button>
+</div>
+		<br>
+		</form>
+	</div>
+</body>
+<script type="text/javascript" src="validate.js"></script>
+<script type="text/javascript">
+var validate=[
+	{
+		"class":"firstname",
+		"null": "true",
+		"length":"atleast 2" 
+	},
+	{
+		"class":"lastname",
+		"null": "true",
+		"length":"atleast 2" 
+	},
+	{
+		"class":"mail",
+		"null":"true",
+		"type":"mail"
+	},
+	
+	{
+		"class":"jobtitle",
+		"null":"true",
+		"length":"atleast 2" 
+	},
+	{
+		"class":"needs",
+		"null":"true",
+		"length":"atleast 2" 
+	},
+	{
+		"class":"heard_abt",
+		"null":"true",
+		"length":"atleast 6" 
+	},
+
+ 
+ 	"reg_form"
+];
+setValidatorFunction(validate);
+</script>
+</html>
