@@ -1,0 +1,23 @@
+.card{
+  /* font-size: 20px; */
+  border: 0.1px solid rgb(180, 176, 176);
+  border-radius: 4px;
+  display: inline-block;
+  height: 360px;
+  width: 360px;
+  margin: 40px;
+  vertical-align: top;
+  box-shadow: 5px 5px 25px 0 rgba(46,61,73,0.2);
+  -webkit-transition:box-shadow 0.4s ease-out;
+  -moz-transition: box-shadow 0.4s ease-out;
+  -o-transition: box-shadow 0.4s ease-out;
+  transition: box-shadow 0.4s ease-out;
+  text-align: center;
+}
+.card:hover{
+  box-shadow: 1px 2px 8px 0 rgba(46, 46, 48,0.2);
+}
+.card-img-top img {
+  height:130px;
+  width:100%;
+}
