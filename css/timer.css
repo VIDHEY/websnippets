@@ -15,3 +15,15 @@
 	transform: translateX(-25%) translateY(-50%); 
 	color: #82B1FF;
 }
+.main{
+	display:flex;
+}
+.colon{
+	font-size:54px;
+	margin: 30px
+}
+.tst{
+	font-size:36px;
+	color:brown;
+	margin-top: 5px;
+}
