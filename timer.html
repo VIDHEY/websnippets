@@ -1,23 +1,35 @@
 <html>
 	<head>
-		<link rel="stylesheet" href="css/timer.css"/>
-		<script src="js/timer.js"></script>
-	</head>	
+		<link rel="stylesheet" href="css/timer.css">
+
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+		<script src="js/timer.js"></script>	
+	</head>
 	<body>
-		<div class = "main">
-		<div class="circle"><div id="days" class="timer"></div></div>
-		<div class = "colon">:</div>
-		<div class="circle"><div id="hours" class="timer" ></div></div>
-		<div class = "colon">:</div>
-		<div class="circle"><div id="minutes" class="timer" ></div></div>
-		<div class = "colon">:</div>
-		<div class="circle"><div id="seconds" class="timer"></div></div>
-	</div>
-	<div class ="main">
-		<div style="margin-left:30px;" class="tst">days</div>
-		<div style="margin-left:120px;" class="tst">hours</div>
-		<div style="margin-left:90px;" class = "tst">minutes</div>
-		<div style="margin-left:70px;" class="tst">seconds</div>
-	</div>
+		<div class="clock" style="margin:2em;"></div>
+		
+		<script type="text/javascript">
+			var clock;
+
+			$(document).ready(function() {
+
+				// Grab the current date
+				var currentDate = new Date();
+
+				// Set some date in the future. In this case, it's always Jan 1
+				var futureDate  = new Date("April 17, 2018 10:00:00");
+
+				// Calculate the difference in seconds between the future and current date
+				var diff = futureDate.getTime() / 1000 - currentDate.getTime() / 1000;
+
+				// Instantiate a coutdown FlipClock
+				clock = $('.clock').FlipClock(diff, {
+					clockFace: 'DailyCounter',
+					countdown: true
+				});
+			});
+		</script>
+		
 	</body>
 </html>
