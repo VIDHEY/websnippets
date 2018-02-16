@@ -8,4 +8,29 @@ margin-bottom: 5px;
 }
 .col-md-12{
     padding-bottom:5px;
+    background-color: white;
+}
+.col-md-8{
+    margin-bottom: 3px;
+}
+
+
+.heading{
+    color:#185a9d;
+}
+.text{
+    color: #0b8793;
+
+}
+div.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+}
+
+.container-width{
+  background-image: linear-gradient(-90deg, #185a9d ,#43cea2);
+
+}
+.col-md-8{
+    background-color: white;
 }

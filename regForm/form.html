@@ -1,20 +1,20 @@
- 
+
 <!DOCTYPE html>
 <html>
 <head>
 	<title></title>
-	
+
 </head>
 <body>
-	 
+
 	<div class="container">
 		<h2>Registration</h2>
 		<form action="" name="registration" class="reg_form">
-		 
+
 		<div >
 			<label for="firstname">First Name</label>
 			<input type="text" name="firstname" id="firstname" class="firstname" />
-			
+
 		</div>
 		<br>
 		<div>
@@ -57,7 +57,7 @@
 		<br>
 		<div >
 			<label for="">What are you interested in Hacking On?</label>
-			<textarea name="interest" id="interest" class="interest" /></textarea> 
+			<textarea name="interest" id="interest" class="interest" /></textarea>
 			</div>
 		<br>
 		<div >
@@ -69,14 +69,14 @@
 		<div >
 
 			<label for="">How Do You Heard About Our Hackathon?</label>
-			<textarea name="heard_abt" id="heard_abt" class="heard_abt" /></textarea> 
+			<textarea name="heard_abt" id="heard_abt" class="heard_abt" /></textarea>
 			</div>
 		<br>
 		<div >
 			<label for="">Any Special Needs or Request?</label>
-			<textarea name="needs" id="needs" class="needs" /></textarea> 
+			<textarea name="needs" id="needs" class="needs" /></textarea>
 			</div>
-		<br> 
+		<br>
 		<div >
 
 			<button type="submit">Register</button>
@@ -91,36 +91,36 @@ var validate=[
 	{
 		"class":"firstname",
 		"null": "true",
-		"length":"atleast 2" 
+		"length":"atleast 2"
 	},
 	{
 		"class":"lastname",
 		"null": "true",
-		"length":"atleast 2" 
+		"length":"atleast 2"
 	},
 	{
 		"class":"mail",
 		"null":"true",
 		"type":"mail"
 	},
-	
+
 	{
 		"class":"jobtitle",
 		"null":"true",
-		"length":"atleast 2" 
+		"length":"atleast 2"
 	},
 	{
 		"class":"needs",
 		"null":"true",
-		"length":"atleast 2" 
+		"length":"atleast 2"
 	},
 	{
 		"class":"heard_abt",
 		"null":"true",
-		"length":"atleast 6" 
+		"length":"atleast 6"
 	},
 
- 
+
  	"reg_form"
 ];
 setValidatorFunction(validate);
