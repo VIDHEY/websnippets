@@ -1,35 +1,82 @@
+<!DOCTYPE html>
 <html>
-	<head>
-		<link rel="stylesheet" href="css/timer.css">
+<head>
+	<title>timer</title>
+  <link href="css/jquery.classycountdown.css" rel="stylesheet" type="text/css">
+  <link href="css/style2.css" rel="stylesheet" type="text/css" media="all" /> 
+</head>
+<body>
+	<div class="content">
 
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <div class="main">
+     
+     <div id="countdown9" class="ClassyCountdownDemo"></div>    
+</div>
+</div>
 
-		<script src="js/timer.js"></script>	
-	</head>
-	<body>
-		<div class="clock" style="margin:2em;"></div>
-		
-		<script type="text/javascript">
-			var clock;
 
-			$(document).ready(function() {
+<script src="js/jquery-timer/jquery.min.js"></script>
+     <script src="js/jquery-timer/jquery.knob.js"></script>
+     <script src="js/jquery-timer/jquery.throttle.js"></script>
+     <script src="js/jquery-timer/jquery.classycountdown.js"></script>
+    <script>
+       var currentDate = new Date().getTime()/1000;     
+        var futureDate  = new Date("April 17, 2018 10:00:00").getTime()/1000;
 
-				// Grab the current date
-				var currentDate = new Date();
+       $(document).ready(function() {
+      $('#countdown9').ClassyCountdown({
+         
 
-				// Set some date in the future. In this case, it's always Jan 1
-				var futureDate  = new Date("April 17, 2018 10:00:00");
+        end: futureDate,
+        now: currentDate,
+        labels: true,
+        style: {
+          element: "",
+          textResponsive: .5,
+          days: {
+            gauge: {
+              thickness: .10,
+              bgColor: "rgba(0,0,0,0)",
+              fgColor: "#000000",
+              lineCap: 'round'
+            },
+            textCSS: 'font-weight:300; color:#2f3238;'
+          },
+          hours: {
+             gauge: {
+               thickness: .10,
+               bgColor: "rgba(0,0,0,0)",
+               fgColor: "#000000",
+               lineCap: 'round'
+             },
+             textCSS: ' font-weight:300; color:#2f3238;'
+           },
+        minutes: {
+          gauge: {
+            thickness: .10,
+            bgColor: "rgba(0,0,0,0)",
+            fgColor: "#000000",
+            lineCap: 'round'
+          },
+          textCSS: ' font-weight:300; color:#2f3238;'
+        },
+        seconds: {
+          gauge: {
+            thickness: .10,
+            bgColor: "rgba(0,0,0,0)",
+            fgColor: "#000000",
+            lineCap: 'round'
+          },
+          textCSS: ' font-weight:300; color:#2f3238;'
+        }
 
-				// Calculate the difference in seconds between the future and current date
-				var diff = futureDate.getTime() / 1000 - currentDate.getTime() / 1000;
-
-				// Instantiate a coutdown FlipClock
-				clock = $('.clock').FlipClock(diff, {
-					clockFace: 'DailyCounter',
-					countdown: true
-				});
-			});
-		</script>
-		
-	</body>
+      },
+      onEndCallback: function() {
+        console.log("Time out!");
+      }
+    });
+  });
+</script>  
+</div>
+</body>
 </html>
